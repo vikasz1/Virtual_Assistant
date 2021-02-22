@@ -5,6 +5,7 @@ import wikipedia  # pip install wikipedia
 import webbrowser
 import os
 import numbers
+import random
 import winsound
 import re
 import requests
@@ -298,7 +299,7 @@ if __name__ == "__main__":
             music_dir = 'D:\\MUSIC\\My Downloaded Music'
             songs = os.listdir(music_dir)
             # print(songs)
-            os.startfile(os.path.join(music_dir, songs[random.random()]))
+            os.startfile(os.path.join(music_dir, songs[int(random.random() * 10)]))
 
         elif "news" in query:
             news_url = "https://news.google.com/news/rss"
@@ -340,7 +341,7 @@ if __name__ == "__main__":
                 speak("Shutting down in 10 second")
                 os.system("shutdown /s /t 10")
             else:
-                speak("Alright")
+                speak("Shut down Cancelled")
         elif "restart" in query:
             speak("Do you wish to restart your computer ? (yes / no): ")
             shutdown = takeCommand().lower()
@@ -391,6 +392,7 @@ if __name__ == "__main__":
                 if alarm_hour == datetime.datetime.now().hour and alarm_minutes == datetime.datetime.now().minute:
 
                     print("\nIt's the time!")
+                    print("")
                     winsound.PlaySound("SystemQuestion", winsound.SND_ALIAS)
                     winsound.PlaySound("SystemQuestion", winsound.SND_ALIAS)
                     winsound.PlaySound("SystemQuestion", winsound.SND_ALIAS)
