@@ -1,4 +1,4 @@
-# to convert clone_voy.py to .exe
+# to convert Assistant.py to .exe
 
 i) pip install pyinstaller
 ii)pip install pywin32 and pywin
