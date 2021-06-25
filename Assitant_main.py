@@ -159,8 +159,6 @@ if __name__ == "__main__":
                 edict = {'Vikas': 'mauryvikas12345@gmail.com',
                          'Ankit': 'akumar397800@gmail.com'}
 
-                edict = {'Shiv': 'mauryashivanand3@gmail.com',
-                         'Ankit': 'akumar397800@gmail.com', }
 
                 toaddr = edict[to]
                 speak("What should I say?")
